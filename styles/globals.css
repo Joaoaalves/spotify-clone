@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Circular Spotify';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/CircularStd-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Circular Spotify';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/CircularStd-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Circular Spotify';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/CircularStd-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Circular Spotify';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/CircularStd-Bold.otf') format('opentype');
+}
+
+main {
+  font-family: 'Circular Spotify', sans-serif;
+}
+
+.gradient-main{
+  background: linear-gradient(180deg, #2A3039 0%, #181818 50% ,#121212 100%);
+}
