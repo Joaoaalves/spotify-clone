@@ -1,6 +1,6 @@
 import { PiHouse } from "react-icons/pi";
 import { IoIosSearch } from "react-icons/io";
-
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { LuLibrary,LuPlus  } from "react-icons/lu";
 import { FaArrowRight,FaListUl  } from "react-icons/fa6";
 
@@ -8,7 +8,7 @@ import { FaArrowRight,FaListUl  } from "react-icons/fa6";
 
 export default function Sidepanel() {
   return (
-    <aside className="grid grid-rows-[7rem_1fr] grid-cols-[1fr] pb-2">
+    <aside className="grid grid-rows-[20vh_63.7vh] 2xl:grid-rows-[12vh_77vh] gap-y-2 min-h-full">
       <Nav />
 
       <Library />
@@ -32,16 +32,20 @@ function Nav(){
 }
 
 function Library(){
-  return <div className="bg-container rounded-lg h-full my-2">
+  return (
+  
+  <div className="bg-container rounded-lg w-full">
     <LibraryHeader />
     <LibraryTags />
+    <ScrollArea className="h-[70%] 2xl:h-[80%]">
     <LibrarySearch />
     <LibraryLists />
-  </div>
+    </ScrollArea>
+  </div>)
 }
 
 function LibraryHeader(){
-  return <div className="flex items-center justify-between w-full py-1">
+  return <div className="flex items-center justify-between w-full mt-1">
     <div className="flex items-center gap-x-2 px-5 w-full text-secondary hover:text-text transition duration-300 ease-in-out cursor-pointer">
       <LuLibrary className="text-3xl"/>
       <h2 className="mt-1">Library</h2>
@@ -55,7 +59,7 @@ function LibraryHeader(){
 }
 
 function LibraryTags(){
-  return <ul className="w-full flex items-center justify-start gap-x-2 px-4 mt-3">
+  return <ul className="w-full flex items-center justify-start gap-x-2 px-4 my-2">
     <LibraryTag text="Playlists"/>
     <LibraryTag text="Songs"/>
     <LibraryTag text="Albums"/>
@@ -93,9 +97,13 @@ function SearchInput(){
 }
 
 function LibraryLists(){
-  return <ul className="w-full flex flex-col items-center justify-center py-1">
+  return <ul className="w-full flex flex-col items-center justify-center py-1 rounded-lg">
     <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Made For You" link="/made-for-you"/>
     <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Recently Played" link="/recently-played"/>
+    <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Liked Songs" link="/liked-songs"/>
+    <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Albums" link="/albums"/>
+    <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Artists" link="/artists"/>
+    <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Podcasts" link="/podcasts"/>
     <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Liked Songs" link="/liked-songs"/>
     <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Albums" link="/albums"/>
     <LibraryListItem icon={<LuLibrary className="text-3xl"/>} title="Artists" link="/artists"/>
