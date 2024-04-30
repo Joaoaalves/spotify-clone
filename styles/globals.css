@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.gradient-main{
-    background: linear-gradient(180deg, #333333 0%, #252525 30%, #121212 100%);
+.gradient-main {
+  background: linear-gradient(180deg, #333333 0%, #252525 30%, #121212 100%);
 }
 
-body{
-    overflow: hidden;
-    background-color: #121212;
+body {
+  overflow: hidden;
+  background-color: #121212;
 }
